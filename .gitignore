@@ -1,0 +1,30 @@
+# ===== 빌드 산출물 =====
+# CMake가 만드는 모든 것은 소스에서 언제든 다시 만들 수 있으므로 저장하지 않는다.
+build/
+out/
+
+# ===== vcpkg =====
+# 매니페스트 모드에서 프로젝트 폴더 안에 설치되는 라이브러리 (vcpkg.json만 있으면 재생성 가능)
+vcpkg_installed/
+
+# ===== CMake =====
+# 개인 PC 전용 Preset (공용 설정은 CMakePresets.json에 커밋한다)
+CMakeUserPresets.json
+
+# ===== IDE / 에디터 =====
+# Visual Studio로 폴더를 열었을 때 생기는 캐시와 사용자 설정
+.vs/
+*.user
+# clangd 등 언어 서버 캐시
+.cache/
+# .vscode/는 팀(=clone한 사람) 공용 설정이므로 무시하지 않는다.
+
+# ===== 런타임 산출물 =====
+*.log
+# 게임 세이브 파일 (9단계 Save System에서 실제 경로가 정해지면 갱신)
+saves/
+
+# ===== OS =====
+Thumbs.db
+desktop.ini
+.DS_Store
